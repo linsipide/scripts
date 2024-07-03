@@ -25,11 +25,12 @@ cd $ROOT_DIR
 	ls
 	read -p "Dans quel répertoire ? " dir_name
 	cd $dir_name || exit  
+
 # Afficher le répertoire courant
 
 	cd $ROOT_DIR/$dir_name
 
-# Demander à lutilisateur de choisir un répertoire ou d'arrêter
+# Demander à lutilisateur de choisir un fichier
 
 	        ls
 		read -p "Quel fichier ? " file_name
@@ -45,17 +46,20 @@ cd $ROOT_DIR
 		fi
 	;;
       n) 
-# Autre boucle
-# Demander le nom du répertoire à explorer
+
+# Autre Répertoire 
+# Demander le nom du sous-répertoire à explorer
+
 	cd $ROOT_DIR2
         ls
         read -p "C'est à quel sujet ? " dir_name
         cd $dir_name || exit    
+
 # Afficher le répertoire courant
 
         cd $ROOT_DIR2/$dir_name
 
-# Demander à lutilisateur de choisir un répertoire ou d'arrêter
+# Demander à lutilisateur de choisir un fichier
 
                 ls
                 read -p "Plus précisément ? " file_name
@@ -74,6 +78,7 @@ cd $ROOT_DIR
       *) 
 
 # Erreur, demander à l'utilisateur de choisir à nouveau
+
       echo "Erreur : choix invalide"
       sleep 0.3s
       exit 0
